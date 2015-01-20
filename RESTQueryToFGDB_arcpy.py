@@ -9,7 +9,7 @@
 #
 #Purpose: 
 # This is a script that will download data exposed through an ESRI rest service and save it as a geodatabase feature class
-# If the REST service has a limit of n features, the script will download n-1 features at a time and then merge the results
+# If the REST service has a limit of n features, the script will download n/2 features at a time and then merge the results
 # This script uses ArcPy and requires ArcGIS 10.2 or higher
 #
 #Development Log:

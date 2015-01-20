@@ -2,17 +2,11 @@ rest-query-to-fgdb-arcpy
 ========================
 This is a script that will download data exposed through an ESRI rest
 service and save it as a geodatabase feature class. If the REST service
-has a limit of n features, the script will download n-1 features at a
+has a limit of n features, the script will download n/2 features at a
 time and then merge the results. This script uses ArcPy and requires
 ArcGIS 10.2 or higher.
 
-Completed round one of development, this is a functional script and the
-major elements are parameterized at the command line path joins are done
-using os.path.join instead of "+ '//' + ".
-
-TO DO:  There is very little error checking in this script.  Add some,
-at least at the major fail points (GDB already exists, FC already
-exists, etc)
+TO DO:  There is limited error checking in this script. Add some more, at least at major fail points (FC already exists, etc). Catch time-outs or "bad status line" errors from invalid HTTP responses. Perhaps a 3-attempt retry.
 
 Inputs:
 gdbPath - geodatabase to store output featureclass
